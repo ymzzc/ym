@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jiangfan.bill.mapper.BilldetailMapper">
+
+    <resultMap id="BaseResultMap" type="com.jiangfan.bill.domain.Billdetail">
+            <result property="id" column="id" jdbcType="BIGINT"/>
+            <result property="costDate" column="cost_date" jdbcType="DATE"/>
+            <result property="costId" column="cost_id" jdbcType="INTEGER"/>
+            <result property="totalAmount" column="total_amount" jdbcType="DECIMAL"/>
+            <result property="summary" column="summary" jdbcType="VARCHAR"/>
+            <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,cost_date,cost_id,
+        total_amount,summary,is_delete,
+        create_time,update_time
+    </sql>
+</mapper>
